@@ -1,0 +1,10 @@
+haystack-ai
+sentence-transformers 
+nltk 
+pypdf
+transformers
+dash
+dash-bootstrap-components
+dash-html-components
+torch
+numpy
