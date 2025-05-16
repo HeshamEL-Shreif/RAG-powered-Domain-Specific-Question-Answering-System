@@ -45,6 +45,7 @@ An intelligent assistant that answers questions based on uploaded documents usin
 ---
 
 ## 📁 Project Structure
+```text
 rag-pdf-assistant/
 ├── app/                  # Backend logic
 │   ├── rag_pipeline.py   # RAG pipeline using Haystack + FAISS
@@ -59,7 +60,7 @@ rag-pdf-assistant/
 ├── README.md
 ├── requirements.txt
 └── demo.mp4              # Short demo recording
-
+```
 ---
 
 ## 🧪 Setup & Run
