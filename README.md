@@ -6,7 +6,7 @@ An intelligent assistant that answers questions based on uploaded documents usin
 
 ## 🚀 Demo
 
-![Demo GIF](demo.gif)
+![Demo GIF](https://github.com/HeshamEL-Shreif/RAG-powered-Domain-Specific-Question-Answering-System/blob/main/image.png)
 
 ---
 
