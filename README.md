@@ -50,7 +50,6 @@ rag-pdf-assistant/
 ├── app/                  # Backend logic
 │   ├── rag_pipeline.py   # RAG pipeline using Haystack + FAISS
 │   ├── retrieval.py      # Embedding and chunking logic
-│   └── llm_response.py   # LLM integration (LLaMA 3)
 │
 ├── ui/                   # Dash app
 │   └── app.py            # Main frontend script
