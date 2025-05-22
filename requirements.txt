@@ -1,4 +1,4 @@
-haystack-ai
+langchain
 sentence-transformers 
 nltk 
 pypdf

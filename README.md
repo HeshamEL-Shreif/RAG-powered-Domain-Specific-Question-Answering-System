@@ -1,12 +1,12 @@
 # 📚 RAG-Powered Domain-Specific Question Answering System
 
-An intelligent assistant that answers questions based on uploaded documents using **RAG (Retrieval-Augmented Generation)** and **LLaMA 3 Instruct 1B**. This project leverages **Haystack** for the backend and **Dash** for a sleek, interactive frontend.
+An intelligent assistant that answers questions based on uploaded documents using **RAG (Retrieval-Augmented Generation)** and **LLaMA 3.2 Instruct 1B**. This project leverages **Haystack** for the backend and **Dash** for a sleek, interactive frontend.
 
 ---
 
 ## 🚀 Demo
 
-![Demo GIF](https://github.com/HeshamEL-Shreif/RAG-powered-Domain-Specific-Question-Answering-System/blob/main/image.png)
+![Demo GIF](https://github.com/HeshamEL-Shreif/RAG-powered-Domain-Specific-Question-Answering-System/blob/main/demo.png)
 
 ---
 
@@ -35,12 +35,12 @@ An intelligent assistant that answers questions based on uploaded documents usin
 
 | Component      | Tooling                                      |
 |----------------|----------------------------------------------|
-| LLM            | `LLaMA 3 Instruct 1B` from Hugging Face      |
+| LLM            | `LLaMA 3.2 Instruct 1B` from Hugging Face    |
 | Framework      | `Haystack` for document processing and RAG   |
-| Embeddings     | `SentenceTransformers`     |
+| Embeddings     | `SentenceTransformers`                       |
 | Vector DB      | `FAISS`                                      |
 | UI             | `Dash` and `Dash Bootstrap Components`       |
-| Backend        | `FastAPI` (optional for scaling/deployment)  |
+| Backend        | `FastAPI`                                    |
 
 ---
 
@@ -50,9 +50,10 @@ rag-pdf-assistant/
 ├── app/                  # Backend logic
 │   ├── rag_pipeline.py   # RAG pipeline using Haystack + FAISS
 │   ├── retrieval.py      # Embedding and chunking logic
+|   ├── main.py           # Main file handels all project components
 │
 ├── ui/                   # Dash app
-│   └── app.py            # Main frontend script
+│   └── ui.py            # Main frontend script
 │
 ├── data/                 # Sample uploaded documents
 ├── tests/                # Unit/integration tests
@@ -81,8 +82,8 @@ python ui/app.py
 
 ## 📦 Requirements
 - Python 3.8+
-- haystack
+- haystack-ai
 - transformers
-- sentence-transformers or InstructorEmbedding
+- sentence-transformers 
 - dash, dash-bootstrap-components
 - faiss-cpu or faiss-gpu

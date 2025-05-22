@@ -6,3 +6,6 @@ __pycache__/
 *.pyo
 *.pyd
 *.db
+*.dist/
+.env/
+data/
