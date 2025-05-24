@@ -13,7 +13,6 @@ os.makedirs(UPLOAD_DIRECTORY, exist_ok=True)
 def main():
     logger = setup_logger(name="main logger", level="DEBUG", log_file="./logs/app.log")
     app = interface()
-    all_files = []
     
 
     @app.callback(
@@ -61,61 +60,59 @@ def main():
         return chat_bubbles, chat_history, "" 
         
     @app.callback(
-        [Output('upload-box-content', 'children'),  Output("uploaded-files-list", "children")], 
-        [Input('upload-data', 'contents'),  Input("upload", "n_clicks")],
-        State('upload-data', 'filename'))
-    def update_drop_box_upload_files(contents, n_clicks, filenames):
+        [Output('upload-box-content', 'children'),
+        Output("uploaded-files-list", "children")], 
+        [Input('upload-data', 'contents'),
+        Input("clear", "n_clicks")],
+        [State('upload-data', 'filename')]
+    )
+    def handle_upload_and_clear(contents, clear_clicks, filenames):
+        triggered_id = dash.callback_context.triggered[0]["prop_id"].split(".")[0]
         saved_files = []
+        
+        if triggered_id == "clear":
+            if os.path.exists(UPLOAD_DIRECTORY):
+                for file in os.listdir(UPLOAD_DIRECTORY):
+                    os.remove(os.path.join(UPLOAD_DIRECTORY, file))
+                logger.info("Cleared uploaded files")
 
-        if not n_clicks:
-            if contents is None or filenames is None: 
-                return [html.Div([
-                    'Drag and Drop or ',
-                    html.A('Select Files')
-                ], style={"marginBottom": "10px"})] + saved_files, [dbc.ListGroupItem("No files Yet")]
-            for filename in filenames:
-                saved_files.append(html.Div(f"{filename}"))
-            return [html.Div('Selected Files:', style={"fontWeight": "bold", "marginBottom": "10px"})] + saved_files, [dbc.ListGroupItem("No files Yet")]
-            
-            
-        if n_clicks:
-            if contents is None or filenames is None:
-                return [html.Div([
-                    'Drag and Drop or ',
-                    html.A('Select Files')
-                ], style={"marginBottom": "10px"})], [dbc.ListGroupItem("No files Yet")]
-                
+        if contents and filenames and triggered_id == "upload-data":
             for content, filename in zip(contents, filenames):
                 try:
-                    content_type, content_string = content.split(',')
-                    decoded = base64.b64decode(content_string)
-
-                    file_path = os.path.join(UPLOAD_DIRECTORY, filename)
-                    with open(file_path, "wb") as f:
-                        f.write(decoded)
-
                     saved_files.append(html.Div(f"✅ Saved: {filename}", style={
                         "textAlign": "left",
                         "padding": "5px 0",
                         "fontSize": "16px",
-                        "color": "#155724"
-                    }))
-                    logger.info(f"File saved: {file_path}")
+                          "color": "#155724"
+                       }))
+                    if filename.endswith(('.csv', '.txt', '.pdf', '.docx')):
+                        _, content_string = content.split(',')
+                        decoded = base64.b64decode(content_string)
+                        with open(os.path.join(UPLOAD_DIRECTORY, filename), "wb") as f:
+                            f.write(decoded)
+                        logger.info(f"File saved: {filename}")
+                    else:
+                        logger.warning(f"Unsupported file type: {filename}")
+                        saved_files.append(html.Div(f"❌ Unsupported file type: {filename}", style={
+                        "color": "red"
+                          }))
                 except Exception as e:
                     logger.error(f"Failed to save file {filename}: {e}")
-                    saved_files.append(html.Div(f"❌ Failed: {filename}", style={
-                        "color": "red"
-                    }))
-            all_files.extend(filenames)
-            saved_files = []
-            return [html.Div([
-                    'Drag and Drop or ',
-                    html.A('Select Files')
-                ], style={"marginBottom": "10px"})] + saved_files, [dbc.ListGroupItem(file) for file in all_files]    
-        
+
+        files = os.listdir(UPLOAD_DIRECTORY) if os.path.exists(UPLOAD_DIRECTORY) else []
+        file_list_ui = [dbc.ListGroupItem(file) for file in files]
+
+        upload_box = html.Div([
+            'Drag and Drop or ',
+            html.A('Select Files')
+        ] + saved_files, style={"marginBottom": "10px"})  
+
+        return upload_box, file_list_ui
 
     app.run()
     
     
 if __name__ == "__main__":
     main()
+    
+    

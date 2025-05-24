@@ -70,11 +70,11 @@ def interface():
                         multiple=True
                     )
 
-    upload_submit_button = dbc.Button("Upload", id='upload', size="me-1", className="me-1", style={"margin": "10px 35%",
-                                                                                    "backgroundColor": "#2832C2",
-                                                                                    "borderStyle":"none",
-                  
-                                                                                    'width': "30%"})
+    clear_button = dbc.Button("Clear", id='clear', size="me-1", className="me-1", style={"margin": "10px 35%",
+                                                                                    "backgroundColor":"red",
+                                                                                    "borderStyle":"none",            
+                               
+    'width': "30%"})
     card_content = [
     dbc.CardHeader("Uploaded Files"),
     dbc.CardBody(
@@ -90,7 +90,7 @@ def interface():
     app.layout = html.Div(children=[
         dbc.Row([header]),
         dbc.Row([upload_title, response_title]),
-        dbc.Row([dbc.Col([drop_box, upload_submit_button, uploaded_files_card], width=3, style={"display": "flex",
+        dbc.Row([dbc.Col([drop_box, uploaded_files_card, clear_button], width=3, style={"display": "flex",
                                                                             "flexDirection": "column",
                                                                             "alignItems": "top center",
                                                                             "justifyContent": "top center"}), 
@@ -100,7 +100,7 @@ def interface():
     ])
 
     app.layout.children.extend([
-        dcc.Store(id="chat-store", data=[]),
+        dcc.Store(id="chat-store", data=[]), dcc.Store(id="pending-files", data=[]),
     ])
     logger.info("UI initialized successfully")
     

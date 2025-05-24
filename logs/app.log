@@ -1,0 +1,276 @@
+2025-05-23 09:51:31 | INFO     | ui_logger | Initializing the UI
+2025-05-23 09:51:31 | INFO     | ui_logger | UI initialized successfully
+2025-05-23 09:52:08 | INFO     | main logger | File saved: data/upload/cover letter.pages
+2025-05-23 09:52:08 | INFO     | main logger | File saved: data/upload/ITI CV Project Description 2025.pdf
+2025-05-23 09:52:21 | INFO     | main logger | File saved: data/upload/command-line-cheat-sheet-large01.png
+2025-05-23 09:52:21 | INFO     | main logger | File saved: data/upload/command-line-cheat-sheet-large02.png
+2025-05-23 09:52:45 | INFO     | main logger | File saved: data/upload/sent_analysis-2.ipynb
+2025-05-23 09:52:45 | INFO     | main logger | File saved: data/upload/sent_analysis.ipynb
+2025-05-23 09:54:55 | INFO     | ui_logger | Initializing the UI
+2025-05-23 09:54:55 | INFO     | ui_logger | UI initialized successfully
+2025-05-23 09:54:59 | INFO     | main logger | clicked None times
+2025-05-23 09:55:03 | INFO     | main logger | clicked None times
+2025-05-23 09:55:04 | INFO     | main logger | clicked 1 times
+2025-05-23 09:55:04 | INFO     | main logger | File saved: data/upload/ecefb2b2-efcb-45f3-b72b-212d90fcd873.pdf
+2025-05-23 09:55:07 | INFO     | main logger | clicked 1 times
+2025-05-23 09:55:07 | INFO     | main logger | File saved: data/upload/L1-Model_prompt_parser.ipynb
+2025-05-23 09:56:03 | INFO     | ui_logger | Initializing the UI
+2025-05-23 09:56:03 | INFO     | ui_logger | UI initialized successfully
+2025-05-23 09:58:03 | INFO     | ui_logger | Initializing the UI
+2025-05-23 09:58:03 | INFO     | ui_logger | UI initialized successfully
+2025-05-23 09:58:08 | INFO     | main logger | clicked None times
+2025-05-23 09:58:13 | INFO     | main logger | clicked None times
+2025-05-23 09:58:13 | INFO     | main logger | clicked None times
+2025-05-23 09:58:20 | INFO     | main logger | clicked None times
+2025-05-23 09:58:22 | INFO     | main logger | clicked 1 times
+2025-05-23 09:58:22 | INFO     | main logger | clicked 0 times
+2025-05-23 09:58:22 | INFO     | main logger | File saved: data/upload/Cardiac_MRI_Report_Generation_Proposal.pdf
+2025-05-23 09:58:26 | INFO     | main logger | clicked 2 times
+2025-05-23 09:58:26 | INFO     | main logger | clicked 0 times
+2025-05-23 09:58:26 | INFO     | main logger | File saved: data/upload/Cardiac_MRI_Report_Generation_Proposal.pdf
+2025-05-23 09:58:33 | INFO     | main logger | clicked 2 times
+2025-05-23 09:58:33 | INFO     | main logger | clicked 0 times
+2025-05-23 09:58:33 | INFO     | main logger | File saved: data/upload/Cardiac_MRI_Report_Generation_Proposal.pdf
+2025-05-23 09:58:33 | INFO     | main logger | File saved: data/upload/07 Generative Models.pdf
+2025-05-23 09:58:35 | INFO     | main logger | User sent a query
+2025-05-23 09:58:35 | INFO     | main logger | LLM responsed
+2025-05-23 09:58:40 | INFO     | main logger | clicked 2 times
+2025-05-23 09:58:40 | INFO     | main logger | clicked 0 times
+2025-05-23 09:58:40 | INFO     | main logger | File saved: data/upload/Computer Vision [LAB 1].pptx
+2025-05-23 09:58:51 | INFO     | ui_logger | Initializing the UI
+2025-05-23 09:58:51 | INFO     | ui_logger | UI initialized successfully
+2025-05-23 09:58:54 | INFO     | main logger | clicked None times
+2025-05-23 09:58:58 | INFO     | main logger | clicked None times
+2025-05-23 09:58:58 | INFO     | main logger | clicked None times
+2025-05-23 09:59:29 | INFO     | ui_logger | Initializing the UI
+2025-05-23 09:59:29 | INFO     | ui_logger | UI initialized successfully
+2025-05-23 09:59:33 | INFO     | main logger | clicked None times
+2025-05-23 09:59:38 | INFO     | main logger | clicked None times
+2025-05-23 09:59:41 | INFO     | main logger | clicked 1 times
+2025-05-23 09:59:41 | INFO     | main logger | clicked 1 times
+2025-05-23 09:59:41 | INFO     | main logger | File saved: data/upload/Cardiac_MRI_Report_Generation_Proposal.pdf
+2025-05-23 09:59:49 | INFO     | main logger | clicked 1 times
+2025-05-23 09:59:49 | INFO     | main logger | clicked 1 times
+2025-05-23 09:59:49 | INFO     | main logger | File saved: data/upload/ITI CV Project Description 2025.pdf
+2025-05-23 10:00:14 | INFO     | ui_logger | Initializing the UI
+2025-05-23 10:00:14 | INFO     | ui_logger | UI initialized successfully
+2025-05-23 10:00:17 | INFO     | main logger | clicked None times
+2025-05-23 10:00:21 | INFO     | main logger | clicked None times
+2025-05-23 10:00:23 | INFO     | main logger | clicked 1 times
+2025-05-23 10:00:23 | INFO     | main logger | clicked 0 times
+2025-05-23 10:00:23 | INFO     | main logger | File saved: data/upload/Cardiac_MRI_Report_Generation_Proposal.pdf
+2025-05-23 10:00:27 | INFO     | main logger | clicked 1 times
+2025-05-23 10:00:27 | INFO     | main logger | clicked 0 times
+2025-05-23 10:00:27 | INFO     | main logger | File saved: data/upload/ecefb2b2-efcb-45f3-b72b-212d90fcd873.pdf
+2025-05-23 10:03:41 | INFO     | ui_logger | Initializing the UI
+2025-05-23 10:03:41 | INFO     | ui_logger | UI initialized successfully
+2025-05-23 10:03:48 | INFO     | main logger | clicked None times
+2025-05-23 10:03:52 | INFO     | main logger | clicked None times
+2025-05-23 10:03:53 | INFO     | main logger | clicked 1 times
+2025-05-23 10:03:54 | INFO     | main logger | clicked 2 times
+2025-05-23 10:03:54 | INFO     | main logger | clicked 3 times
+2025-05-23 10:03:54 | INFO     | main logger | clicked 4 times
+2025-05-23 10:03:54 | INFO     | main logger | clicked 5 times
+2025-05-23 10:03:55 | INFO     | main logger | clicked 6 times
+2025-05-23 10:04:36 | INFO     | ui_logger | Initializing the UI
+2025-05-23 10:04:36 | INFO     | ui_logger | UI initialized successfully
+2025-05-23 10:04:39 | INFO     | main logger | clicked None times
+2025-05-23 10:04:43 | INFO     | main logger | clicked None times
+2025-05-23 10:04:44 | INFO     | main logger | clicked 1 times
+2025-05-23 10:04:45 | INFO     | main logger | clicked 2 times
+2025-05-23 10:04:45 | INFO     | main logger | clicked 3 times
+2025-05-23 10:04:45 | INFO     | main logger | clicked 4 times
+2025-05-23 10:05:45 | INFO     | ui_logger | Initializing the UI
+2025-05-23 10:05:45 | INFO     | ui_logger | UI initialized successfully
+2025-05-23 10:06:53 | INFO     | ui_logger | Initializing the UI
+2025-05-23 10:06:53 | INFO     | ui_logger | UI initialized successfully
+2025-05-23 10:07:04 | INFO     | main logger | saved_files length: 0
+2025-05-23 10:07:37 | INFO     | ui_logger | Initializing the UI
+2025-05-23 10:07:37 | INFO     | ui_logger | UI initialized successfully
+2025-05-23 10:09:30 | INFO     | ui_logger | Initializing the UI
+2025-05-23 10:09:30 | INFO     | ui_logger | UI initialized successfully
+2025-05-23 10:15:07 | INFO     | ui_logger | Initializing the UI
+2025-05-23 10:15:07 | INFO     | ui_logger | UI initialized successfully
+2025-05-23 10:15:25 | INFO     | main logger | saved_files length: 0
+2025-05-23 10:15:27 | INFO     | main logger | saved_files length: 0
+2025-05-23 10:15:27 | INFO     | main logger | saved_files length: 0
+2025-05-23 10:15:31 | INFO     | main logger | User sent a query
+2025-05-23 10:15:31 | INFO     | main logger | LLM responsed
+2025-05-23 10:15:33 | INFO     | main logger | saved_files length: 0
+2025-05-23 10:15:33 | INFO     | main logger | saved_files length: 0
+2025-05-23 10:15:33 | INFO     | main logger | saved_files length: 0
+2025-05-23 10:15:33 | INFO     | main logger | saved_files length: 0
+2025-05-23 10:15:34 | INFO     | main logger | saved_files length: 0
+2025-05-23 10:15:35 | INFO     | main logger | saved_files length: 0
+2025-05-23 10:15:35 | INFO     | main logger | saved_files length: 0
+2025-05-23 10:16:07 | INFO     | ui_logger | Initializing the UI
+2025-05-23 10:16:07 | INFO     | ui_logger | UI initialized successfully
+2025-05-23 10:16:14 | INFO     | main logger | saved_files length: 0
+2025-05-23 10:16:14 | INFO     | main logger | clicked 1 times
+2025-05-23 10:16:15 | INFO     | main logger | saved_files length: 0
+2025-05-23 10:16:15 | INFO     | main logger | clicked 2 times
+2025-05-23 10:16:15 | INFO     | main logger | saved_files length: 0
+2025-05-23 10:16:15 | INFO     | main logger | clicked 3 times
+2025-05-23 10:16:15 | INFO     | main logger | saved_files length: 0
+2025-05-23 10:16:15 | INFO     | main logger | clicked 4 times
+2025-05-23 10:16:20 | INFO     | main logger | saved_files length: 0
+2025-05-23 10:16:20 | INFO     | main logger | clicked 5 times
+2025-05-23 10:16:20 | INFO     | main logger | saved_files length: 0
+2025-05-23 10:16:20 | INFO     | main logger | clicked 6 times
+2025-05-23 10:17:10 | INFO     | main logger | saved_files length: 0
+2025-05-23 10:17:10 | INFO     | main logger | clicked 7 times
+2025-05-23 10:17:56 | INFO     | ui_logger | Initializing the UI
+2025-05-23 10:17:56 | INFO     | ui_logger | UI initialized successfully
+2025-05-23 11:41:17 | INFO     | ui_logger | Initializing the UI
+2025-05-23 11:41:17 | INFO     | ui_logger | UI initialized successfully
+2025-05-23 11:41:29 | INFO     | main logger | clicked 1 times
+2025-05-23 11:41:29 | INFO     | main logger | clicked 2 times
+2025-05-23 11:41:29 | INFO     | main logger | clicked 3 times
+2025-05-23 11:41:29 | INFO     | main logger | clicked 4 times
+2025-05-23 19:40:57 | INFO     | ui_logger | Initializing the UI
+2025-05-23 19:40:57 | INFO     | ui_logger | UI initialized successfully
+2025-05-23 19:41:16 | INFO     | main logger | File saved: data/upload/Cardiac_MRI_Report_Generation_Proposal.pdf
+2025-05-23 19:41:25 | INFO     | main logger | File saved: data/upload/command-line-cheat-sheet-large01.png
+2025-05-23 19:41:25 | INFO     | main logger | File saved: data/upload/07 Generative Models.pdf
+2025-05-23 19:46:19 | INFO     | ui_logger | Initializing the UI
+2025-05-23 19:46:19 | INFO     | ui_logger | UI initialized successfully
+2025-05-23 19:46:27 | INFO     | main logger | File saved: data/upload/07 Generative Models.pdf
+2025-05-23 19:46:31 | INFO     | main logger | File saved: data/upload/command-line-cheat-sheet-large01.png
+2025-05-23 19:46:46 | INFO     | ui_logger | Initializing the UI
+2025-05-23 19:46:46 | INFO     | ui_logger | UI initialized successfully
+2025-05-23 19:46:53 | INFO     | main logger | File saved: data/upload/1706.03762v7.pdf
+2025-05-23 19:46:58 | INFO     | main logger | File saved: data/upload/command-line-cheat-sheet-large01.png
+2025-05-23 19:55:23 | INFO     | ui_logger | Initializing the UI
+2025-05-23 19:55:23 | INFO     | ui_logger | UI initialized successfully
+2025-05-23 20:06:31 | INFO     | ui_logger | Initializing the UI
+2025-05-23 20:06:31 | INFO     | ui_logger | UI initialized successfully
+2025-05-23 20:06:50 | INFO     | main logger | File saved: data/upload/1706.03762v7.pdf
+2025-05-23 20:06:50 | INFO     | main logger | File saved: data/upload/07 Generative Models.pdf
+2025-05-23 20:07:10 | WARNING  | main logger | Unsupported file type: command-line-cheat-sheet-large01.png
+2025-05-23 20:07:10 | INFO     | main logger | File saved: data/upload/ecefb2b2-efcb-45f3-b72b-212d90fcd873.pdf
+2025-05-23 20:07:10 | WARNING  | main logger | Unsupported file type: Computer Vision [LAB 1].pptx
+2025-05-23 20:09:55 | INFO     | ui_logger | Initializing the UI
+2025-05-23 20:09:55 | INFO     | ui_logger | UI initialized successfully
+2025-05-23 20:10:08 | WARNING  | main logger | Unsupported file type: command-line-cheat-sheet-large01.png
+2025-05-23 20:10:23 | INFO     | main logger | File saved: data/upload/Mohamed Ahmed Resume .docx
+2025-05-23 20:10:53 | INFO     | main logger | File saved: data/upload/Cardiac_MRI_Report_Generation_Proposal.pdf
+2025-05-23 20:11:56 | INFO     | ui_logger | Initializing the UI
+2025-05-23 20:11:56 | INFO     | ui_logger | UI initialized successfully
+2025-05-23 20:12:10 | INFO     | main logger | File saved: data/upload/1706.03762v7.pdf
+2025-05-23 20:12:47 | INFO     | main logger | File saved: data/upload/transformers-for-natural-language-processing.pdf
+2025-05-23 20:13:05 | INFO     | main logger | File saved: data/upload/Deep_Learning_with_PyTorch_1.pdf
+2025-05-23 20:14:53 | INFO     | ui_logger | Initializing the UI
+2025-05-23 20:14:53 | INFO     | ui_logger | UI initialized successfully
+2025-05-23 20:15:08 | INFO     | main logger | File saved: data/upload/Deep_Learning_with_PyTorch_1.pdf
+2025-05-23 20:15:08 | INFO     | main logger | File saved: data/upload/git_cheat_sheet (1).pdf
+2025-05-23 20:15:34 | WARNING  | main logger | Unsupported file type: kaggle.json
+2025-05-23 20:42:45 | INFO     | ui_logger | Initializing the UI
+2025-05-23 20:42:45 | INFO     | ui_logger | UI initialized successfully
+2025-05-23 20:43:42 | INFO     | ui_logger | Initializing the UI
+2025-05-23 20:43:42 | INFO     | ui_logger | UI initialized successfully
+2025-05-23 20:44:10 | INFO     | ui_logger | Initializing the UI
+2025-05-23 20:44:10 | INFO     | ui_logger | UI initialized successfully
+2025-05-23 20:48:18 | INFO     | main logger | User sent a query
+2025-05-23 20:48:18 | INFO     | main logger | LLM responsed
+2025-05-23 20:48:19 | INFO     | main logger | User sent a query
+2025-05-23 20:48:19 | INFO     | main logger | LLM responsed
+2025-05-23 20:50:05 | INFO     | ui_logger | Initializing the UI
+2025-05-23 20:50:05 | INFO     | ui_logger | UI initialized successfully
+2025-05-23 20:51:31 | INFO     | ui_logger | Initializing the UI
+2025-05-23 20:51:31 | INFO     | ui_logger | UI initialized successfully
+2025-05-23 20:53:36 | INFO     | ui_logger | Initializing the UI
+2025-05-23 20:53:36 | INFO     | ui_logger | UI initialized successfully
+2025-05-23 20:54:05 | INFO     | ui_logger | Initializing the UI
+2025-05-23 20:54:05 | INFO     | ui_logger | UI initialized successfully
+2025-05-23 20:54:49 | INFO     | ui_logger | Initializing the UI
+2025-05-23 20:54:49 | INFO     | ui_logger | UI initialized successfully
+2025-05-23 20:54:59 | INFO     | main logger | File saved: data/upload/ML+Cheat+Sheet_2.pdf
+2025-05-23 20:54:59 | INFO     | main logger | File saved: data/upload/Jupyterlab_Cheat_Sheet.pdf
+2025-05-23 20:54:59 | INFO     | main logger | File saved: data/upload/git_cheat_sheet (1).pdf
+2025-05-23 20:55:06 | INFO     | main logger | Cleared uploaded files
+2025-05-23 20:55:06 | INFO     | main logger | Cleared uploaded files
+2025-05-23 20:55:41 | INFO     | ui_logger | Initializing the UI
+2025-05-23 20:55:41 | INFO     | ui_logger | UI initialized successfully
+2025-05-23 20:55:48 | WARNING  | main logger | Unsupported file type: git-cheat-sheet-large01.png
+2025-05-23 20:55:48 | INFO     | main logger | File saved: data/upload/git_cheat_sheet (1).pdf
+2025-05-23 20:55:55 | INFO     | main logger | User sent a query
+2025-05-23 20:55:55 | INFO     | main logger | LLM responsed
+2025-05-23 20:56:10 | INFO     | main logger | File saved: data/upload/Deep_Learning_with_PyTorch_1.pdf
+2025-05-23 20:56:17 | INFO     | main logger | Cleared uploaded files
+2025-05-23 20:56:18 | INFO     | main logger | Cleared uploaded files
+2025-05-23 20:56:18 | INFO     | main logger | Cleared uploaded files
+2025-05-23 20:56:18 | INFO     | main logger | Cleared uploaded files
+2025-05-23 20:56:18 | INFO     | main logger | Cleared uploaded files
+2025-05-23 20:56:19 | INFO     | main logger | Cleared uploaded files
+2025-05-23 20:56:35 | INFO     | main logger | File saved: data/upload/Jupyterlab_Cheat_Sheet.pdf
+2025-05-23 20:56:35 | INFO     | main logger | File saved: data/upload/Deep_Learning_with_PyTorch_1.pdf
+2025-05-23 20:56:42 | INFO     | main logger | Cleared uploaded files
+2025-05-23 20:57:12 | INFO     | ui_logger | Initializing the UI
+2025-05-23 20:57:12 | INFO     | ui_logger | UI initialized successfully
+2025-05-23 20:57:24 | INFO     | main logger | File saved: data/upload/git-cheat-sheet-education.pdf
+2025-05-23 20:57:24 | INFO     | main logger | File saved: data/upload/Deep_Learning_with_PyTorch_1.pdf
+2025-05-23 20:57:24 | INFO     | main logger | File saved: data/upload/Keras_Cheat_Sheet_gssmi8.pdf
+2025-05-23 20:57:26 | INFO     | main logger | Cleared uploaded files
+2025-05-23 21:00:51 | INFO     | ui_logger | Initializing the UI
+2025-05-23 21:00:51 | INFO     | ui_logger | UI initialized successfully
+2025-05-23 21:00:58 | WARNING  | main logger | Unsupported file type: git-cheat-sheet-large01.png
+2025-05-23 21:00:58 | INFO     | main logger | File saved: ML+Cheat+Sheet_2.pdf
+2025-05-23 21:00:58 | INFO     | main logger | File saved: git_cheat_sheet.pdf
+2025-05-23 21:01:03 | INFO     | main logger | Cleared uploaded files
+2025-05-23 21:01:09 | WARNING  | main logger | Unsupported file type: git-cheat-sheet-large01.png
+2025-05-23 21:01:09 | INFO     | main logger | File saved: Matplotlib_Cheat_Sheet.pdf
+2025-05-23 21:01:09 | INFO     | main logger | File saved: Data_Wrangling_Cheat_Sheet.pdf
+2025-05-23 21:01:09 | INFO     | main logger | File saved: Numpy_Cheat_Sheet.pdf
+2025-05-23 21:01:09 | INFO     | main logger | File saved: git_cheat_sheet.pdf
+2025-05-23 21:01:25 | INFO     | main logger | Cleared uploaded files
+2025-05-23 21:01:34 | INFO     | main logger | File saved: git-cheat-sheet-education.pdf
+2025-05-23 21:01:34 | WARNING  | main logger | Unsupported file type: git-cheat-sheet-large01.png
+2025-05-23 21:01:34 | INFO     | main logger | File saved: Deep_Learning_with_PyTorch_1.pdf
+2025-05-23 21:01:34 | INFO     | main logger | File saved: Keras_Cheat_Sheet_gssmi8.pdf
+2025-05-23 21:01:34 | INFO     | main logger | File saved: git_cheat_sheet (1).pdf
+2025-05-23 21:01:43 | WARNING  | main logger | Unsupported file type: git-cheat-sheet-large01.png
+2025-05-23 21:06:46 | INFO     | ui_logger | Initializing the UI
+2025-05-23 21:06:46 | INFO     | ui_logger | UI initialized successfully
+2025-05-23 21:06:56 | WARNING  | main logger | Unsupported file type: git-cheat-sheet-large01.png
+2025-05-23 21:06:56 | ERROR    | main logger | Failed to save file Matplotlib_Cheat_Sheet.pdf: list.append() takes exactly one argument (0 given)
+2025-05-23 21:06:56 | ERROR    | main logger | Failed to save file ML+Cheat+Sheet_2.pdf: list.append() takes exactly one argument (0 given)
+2025-05-23 21:06:56 | ERROR    | main logger | Failed to save file git_cheat_sheet (1).pdf: list.append() takes exactly one argument (0 given)
+2025-05-23 21:06:59 | INFO     | main logger | User sent a query
+2025-05-23 21:06:59 | INFO     | main logger | LLM responsed
+2025-05-23 21:07:04 | ERROR    | main logger | Failed to save file Keras_Cheat_Sheet_gssmi8.pdf: list.append() takes exactly one argument (0 given)
+2025-05-23 21:07:09 | ERROR    | main logger | Failed to save file Open_AI_Python.pdf: list.append() takes exactly one argument (0 given)
+2025-05-23 21:07:18 | INFO     | ui_logger | Initializing the UI
+2025-05-23 21:07:18 | INFO     | ui_logger | UI initialized successfully
+2025-05-23 21:07:33 | ERROR    | main logger | Failed to save file git-cheat-sheet-education.pdf: list.append() takes exactly one argument (0 given)
+2025-05-23 21:07:33 | ERROR    | main logger | Failed to save file Matplotlib_Cheat_Sheet.pdf: list.append() takes exactly one argument (0 given)
+2025-05-23 21:07:33 | ERROR    | main logger | Failed to save file Data_Wrangling_Cheat_Sheet.pdf: list.append() takes exactly one argument (0 given)
+2025-05-23 21:07:33 | ERROR    | main logger | Failed to save file Conda_Cheat_Sheet_1.pdf: list.append() takes exactly one argument (0 given)
+2025-05-23 21:07:35 | INFO     | main logger | Cleared uploaded files
+2025-05-23 21:07:38 | ERROR    | main logger | Failed to save file Deep_Learning_with_PyTorch_1.pdf: list.append() takes exactly one argument (0 given)
+2025-05-23 21:08:55 | INFO     | ui_logger | Initializing the UI
+2025-05-23 21:08:55 | INFO     | ui_logger | UI initialized successfully
+2025-05-23 21:09:04 | WARNING  | main logger | Unsupported file type: git-cheat-sheet-large01.png
+2025-05-23 21:09:04 | ERROR    | main logger | Failed to save file git_cheat_sheet.pdf: list.append() takes exactly one argument (0 given)
+2025-05-23 21:09:24 | INFO     | ui_logger | Initializing the UI
+2025-05-23 21:09:24 | INFO     | ui_logger | UI initialized successfully
+2025-05-23 21:09:31 | INFO     | main logger | File saved: git-cheat-sheet-education.pdf
+2025-05-23 21:09:31 | INFO     | main logger | File saved: Jupyterlab_Cheat_Sheet.pdf
+2025-05-23 21:09:35 | INFO     | main logger | Cleared uploaded files
+2025-05-23 21:09:39 | INFO     | main logger | File saved: ML+Cheat+Sheet_2.pdf
+2025-05-23 21:09:39 | INFO     | main logger | File saved: Jupyterlab_Cheat_Sheet.pdf
+2025-05-23 21:09:41 | INFO     | main logger | Cleared uploaded files
+2025-05-23 21:09:53 | INFO     | ui_logger | Initializing the UI
+2025-05-23 21:09:53 | INFO     | ui_logger | UI initialized successfully
+2025-05-23 21:10:01 | INFO     | main logger | File saved: ML+Cheat+Sheet_2.pdf
+2025-05-23 21:10:01 | INFO     | main logger | File saved: Jupyterlab_Cheat_Sheet.pdf
+2025-05-23 21:10:39 | INFO     | ui_logger | Initializing the UI
+2025-05-23 21:10:39 | INFO     | ui_logger | UI initialized successfully
+2025-05-23 21:10:44 | INFO     | main logger | File saved: git-cheat-sheet-education.pdf
+2025-05-23 21:10:44 | INFO     | main logger | File saved: Keras_Cheat_Sheet_gssmi8.pdf
+2025-05-23 21:10:52 | WARNING  | main logger | Unsupported file type: git-cheat-sheet-large01.png
+2025-05-23 21:11:02 | INFO     | main logger | File saved: Matplotlib_Cheat_Sheet.pdf
+2025-05-23 21:11:02 | INFO     | main logger | File saved: Jupyterlab_Cheat_Sheet.pdf
+2025-05-23 21:11:02 | INFO     | main logger | File saved: Pandas_Cheat_Sheet.pdf
+2025-05-23 21:11:02 | INFO     | main logger | File saved: Numpy_Cheat_Sheet.pdf
+2025-05-23 21:11:11 | INFO     | main logger | File saved: Conda_Cheat_Sheet_1.pdf
+2025-05-23 21:11:14 | INFO     | main logger | Cleared uploaded files
