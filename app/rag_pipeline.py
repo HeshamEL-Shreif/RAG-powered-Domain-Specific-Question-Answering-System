@@ -42,7 +42,7 @@ def initialize_faiss(embeddings):
 
 def initiate_models():
 
-    model_name_or_path = "llama-3.2-1b-instruct"
+    model_name_or_path = "meta-llama/Llama-3.2-1B-Instruct"
 
     
 
