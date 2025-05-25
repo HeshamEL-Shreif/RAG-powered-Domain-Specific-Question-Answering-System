@@ -54,7 +54,6 @@ def initiate_models():
         "text-generation",
         model=model,
         tokenizer=tokenizer,
-        max_length=512,
     )
     
     llm = HuggingFacePipeline(pipeline=text_gen_pipeline)
@@ -70,10 +69,7 @@ def initiate_models():
 
         - If the user greets (e.g., says "hi", "hello"), respond with a short friendly message and do not over-explain.
         - If there is no helpful information in the context, say you don't know and do not make up an answer.
-        - If the user asks a question that is not related to the context, say you don't know and do not make up an answer.
         - If the user asks a question that is related to the context, provide a concise and accurate answer based on the context.
-        - just answer the question without any additional information or explanations.
-        - If the user asks for a summary, provide a brief summary of the context.
 
         Context:
         {context}

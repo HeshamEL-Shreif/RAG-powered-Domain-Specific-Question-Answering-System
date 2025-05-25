@@ -521,3 +521,15 @@ Make sure your token has the correct permissions.
 2025-05-26 01:34:58 | INFO     | rag_pipeline | [INFO] ConversationalRetrievalChain created successfully.
 2025-05-26 01:34:58 | INFO     | ui_logger | Initializing the UI
 2025-05-26 01:34:58 | INFO     | ui_logger | UI initialized successfully
+2025-05-26 01:35:39 | INFO     | main logger | User sent a query
+2025-05-26 01:35:40 | ERROR    | rag_pipeline | Error generating response: Input length of input_ids is 1112, but `max_length` is set to 512. This can lead to unexpected behavior. You should consider increasing `max_length` or, better yet, setting `max_new_tokens`.
+2025-05-26 01:35:40 | INFO     | main logger | LLM responsed
+2025-05-26 01:38:06 | INFO     | rag_pipeline | [INFO] Loading documents from: ./data/upload/1706.03762v7.pdf
+2025-05-26 01:38:11 | INFO     | rag_pipeline | [SUCCESS] Documents loaded from: ./data/upload/1706.03762v7.pdf
+2025-05-26 01:38:11 | INFO     | rag_pipeline | [INFO] Models initialized successfully.
+2025-05-26 01:38:11 | INFO     | retrieval | FAISS index loaded successfully from ./data/faiss
+2025-05-26 01:38:11 | INFO     | rag_pipeline | [INFO] Base retriever initialized.
+2025-05-26 01:38:11 | INFO     | rag_pipeline | [INFO] ConversationalRetrievalChain created successfully.
+2025-05-26 01:38:11 | INFO     | ui_logger | Initializing the UI
+2025-05-26 01:38:11 | INFO     | ui_logger | UI initialized successfully
+2025-05-26 01:39:28 | INFO     | main logger | User sent a query
