@@ -6,6 +6,8 @@ from ui.ui import interface
 from logger.logging_config import setup_logger
 import os
 import base64
+from app.data_handeler import load_documents
+from app.rag_pipeline import get_response
 
 UPLOAD_DIRECTORY = "data/upload"
 os.makedirs(UPLOAD_DIRECTORY, exist_ok=True)
@@ -30,7 +32,7 @@ def main():
         logger.info("User sent a query")
         
 
-        llm_response = "This is a dummy response from the assistant."
+        llm_response = get_response(query)
         
         logger.info("LLM responsed")
         
@@ -90,6 +92,8 @@ def main():
                         decoded = base64.b64decode(content_string)
                         with open(os.path.join(UPLOAD_DIRECTORY, filename), "wb") as f:
                             f.write(decoded)
+                        
+                        load_documents(os.path.join(UPLOAD_DIRECTORY, filename))
                         logger.info(f"File saved: {filename}")
                     else:
                         logger.warning(f"Unsupported file type: {filename}")
