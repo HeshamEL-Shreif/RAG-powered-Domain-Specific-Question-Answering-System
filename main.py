@@ -44,8 +44,8 @@ def main():
         logger.info("User sent a query")
         
 
-        # llm_response = get_response(query, qa_chain)
-        llm_response = 'dummy'
+        llm_response = get_response(query, qa_chain)
+        #llm_response = 'dummy'
         
         logger.info("LLM responsed")
         
