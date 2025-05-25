@@ -40,7 +40,6 @@ An intelligent assistant that answers questions based on uploaded documents usin
 | Embeddings     | `SentenceTransformers`                        |
 | Vector DB      | `FAISS` via LangChain                         |
 | UI             | `Dash` and `Dash Bootstrap Components`        |
-| Backend        | `FastAPI`                                     |
 
 ---
 
@@ -49,15 +48,13 @@ An intelligent assistant that answers questions based on uploaded documents usin
 rag-pdf-assistant/
 ├── app/
 │   ├── __init__.py
-│   ├── app.py               # FastAPI entry point
+│   ├── data_handeler.py # File parsing and text chunking logic, Embedding, FAISS store
 │   ├── rag_pipeline.py      # LangChain RAG pipeline (retriever + generator + memory)
-│   ├── retrieval.py         # Embedding, FAISS store, retriever setup
+│   ├── retrieval.py         #  retriever setup
 │
 ├── data/
 │   ├── upload/
-│   │   ├── __init__.py
-│   │   └── data_handeler.py # File parsing and text chunking logic
-│   └── __init__.py
+│   └── faiss/ # vector database
 │
 ├── logger/
 │   ├── __init__.py
@@ -74,7 +71,6 @@ rag-pdf-assistant/
 │   └── ui.py                # Dash frontend with file uploader + chat interface
 │
 ├── demo.png                 # Static screenshot of the interface
-├── main.ipynb               # Optional: Jupyter notebook for experimentation
 ├── main.py                  # Entry script to launch app
 ├── README.md                # Documentation
 ├── requirements.txt         # Dependencies
@@ -108,4 +104,3 @@ python main.py
 - sentence-transformers
 - faiss-cpu or faiss-gpu
 - dash, dash-bootstrap-components
-- fastapi
