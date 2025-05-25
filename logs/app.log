@@ -274,3 +274,64 @@
 2025-05-23 21:11:02 | INFO     | main logger | File saved: Numpy_Cheat_Sheet.pdf
 2025-05-23 21:11:11 | INFO     | main logger | File saved: Conda_Cheat_Sheet_1.pdf
 2025-05-23 21:11:14 | INFO     | main logger | Cleared uploaded files
+2025-05-25 21:52:08 | ERROR    | retrieval | Error loading FAISS index: The de-serialization relies loading a pickle file. Pickle files can be modified to deliver a malicious payload that results in execution of arbitrary code on your machine.You will need to set `allow_dangerous_deserialization` to `True` to enable deserialization. If you do this, make sure that you trust the source of the data. For example, if you are loading a file that you created, and know that no one else has modified the file, then this is safe to do. Do not set this to `True` if you are loading a file from an untrusted source (e.g., some random site on the internet.).
+2025-05-25 22:34:33 | INFO     | rag_pipeline | [INFO] Initializing dummy embeddings...
+2025-05-25 22:34:35 | INFO     | rag_pipeline | [SUCCESS] Dummy FAISS index created at: ./data/faiss
+2025-05-25 22:34:35 | INFO     | rag_pipeline | [INFO] Models initialized successfully.
+2025-05-25 22:43:07 | INFO     | rag_pipeline | [INFO] Initializing dummy embeddings...
+2025-05-25 22:43:10 | INFO     | rag_pipeline | [SUCCESS] Dummy FAISS index created at: ./data/faiss
+2025-05-25 22:43:10 | INFO     | rag_pipeline | [INFO] Models initialized successfully.
+2025-05-25 22:43:10 | INFO     | retrieval | retriever type: <class 'langchain_core.vectorstores.base.VectorStoreRetriever'>
+2025-05-25 22:48:17 | INFO     | rag_pipeline | [INFO] Initializing dummy embeddings...
+2025-05-25 22:48:18 | INFO     | rag_pipeline | [SUCCESS] Dummy FAISS index created at: ./data/faiss
+2025-05-25 22:48:18 | INFO     | rag_pipeline | [INFO] Models initialized successfully.
+2025-05-25 22:48:18 | INFO     | retrieval | retriever type: <class 'langchain_core.vectorstores.base.VectorStoreRetriever'>
+2025-05-25 22:48:18 | INFO     | ui_logger | Initializing the UI
+2025-05-25 22:48:18 | INFO     | ui_logger | UI initialized successfully
+2025-05-25 22:48:45 | ERROR    | main logger | Failed to save file 1706.03762v7.pdf: `pypdf` package not found, please install it with `pip install pypdf`
+2025-05-25 22:48:45 | INFO     | retrieval | retriever type: <class 'langchain_core.vectorstores.base.VectorStoreRetriever'>
+2025-05-25 22:48:51 | INFO     | main logger | User sent a query
+2025-05-25 22:48:52 | ERROR    | rag_pipeline | Error generating response: 402 Client Error: Payment Required for url: https://router.huggingface.co/hf-inference/models/meta-llama/Llama-3.2-1B-Instruct/v1/chat/completions (Request ID: Root=1-68337424-3b6637d1573a5ef978e6ba54;bd309c67-6627-48ab-8b1a-0674382f820e)
+
+You have exceeded your monthly included credits for Inference Providers. Subscribe to PRO to get 20x more monthly included credits.
+2025-05-25 22:48:52 | INFO     | main logger | LLM responsed
+2025-05-25 22:49:01 | INFO     | main logger | User sent a query
+2025-05-25 22:49:02 | ERROR    | rag_pipeline | Error generating response: 402 Client Error: Payment Required for url: https://router.huggingface.co/hf-inference/models/meta-llama/Llama-3.2-1B-Instruct/v1/chat/completions (Request ID: Root=1-6833742e-271e25613b9217f12ad20318;753a400e-4ed8-4de9-a0f7-89b33882b101)
+
+You have exceeded your monthly included credits for Inference Providers. Subscribe to PRO to get 20x more monthly included credits.
+2025-05-25 22:49:02 | INFO     | main logger | LLM responsed
+2025-05-25 23:10:32 | INFO     | rag_pipeline | [INFO] Initializing dummy embeddings...
+2025-05-25 23:10:33 | INFO     | rag_pipeline | [SUCCESS] Dummy FAISS index created at: ./data/faiss
+2025-05-25 23:10:33 | INFO     | rag_pipeline | [INFO] Models initialized successfully.
+2025-05-25 23:10:33 | INFO     | retrieval | retriever type: <class 'langchain_core.vectorstores.base.VectorStoreRetriever'>
+2025-05-25 23:10:33 | INFO     | ui_logger | Initializing the UI
+2025-05-25 23:10:33 | INFO     | ui_logger | UI initialized successfully
+2025-05-25 23:11:34 | INFO     | main logger | User sent a query
+2025-05-25 23:11:38 | INFO     | main logger | User sent a query
+2025-05-25 23:11:40 | INFO     | main logger | User sent a query
+2025-05-25 23:11:41 | INFO     | main logger | User sent a query
+2025-05-25 23:11:41 | INFO     | main logger | User sent a query
+2025-05-25 23:11:50 | ERROR    | main logger | Failed to save file Cardiac_MRI_Report_Generation_Proposal.pdf: The de-serialization relies loading a pickle file. Pickle files can be modified to deliver a malicious payload that results in execution of arbitrary code on your machine.You will need to set `allow_dangerous_deserialization` to `True` to enable deserialization. If you do this, make sure that you trust the source of the data. For example, if you are loading a file that you created, and know that no one else has modified the file, then this is safe to do. Do not set this to `True` if you are loading a file from an untrusted source (e.g., some random site on the internet.).
+2025-05-25 23:11:50 | INFO     | retrieval | retriever type: <class 'langchain_core.vectorstores.base.VectorStoreRetriever'>
+2025-05-25 23:11:53 | INFO     | main logger | User sent a query
+2025-05-25 23:22:13 | INFO     | rag_pipeline | [INFO] Initializing dummy embeddings...
+2025-05-25 23:22:16 | INFO     | rag_pipeline | [SUCCESS] Dummy FAISS index created at: ./data/faiss
+2025-05-25 23:22:16 | INFO     | rag_pipeline | [INFO] Models initialized successfully.
+2025-05-25 23:22:16 | INFO     | retrieval | retriever type: <class 'langchain_core.vectorstores.base.VectorStoreRetriever'>
+2025-05-25 23:22:16 | INFO     | ui_logger | Initializing the UI
+2025-05-25 23:22:16 | INFO     | ui_logger | UI initialized successfully
+2025-05-25 23:22:30 | INFO     | main logger | User sent a query
+2025-05-25 23:22:32 | INFO     | main logger | User sent a query
+2025-05-25 23:22:33 | INFO     | main logger | User sent a query
+2025-05-25 23:23:48 | INFO     | main logger | File saved: ecefb2b2-efcb-45f3-b72b-212d90fcd873.pdf
+2025-05-25 23:23:48 | INFO     | retrieval | retriever type: <class 'langchain_core.vectorstores.base.VectorStoreRetriever'>
+2025-05-25 23:30:02 | INFO     | rag_pipeline | [INFO] Initializing dummy embeddings...
+2025-05-25 23:30:02 | INFO     | rag_pipeline | [SUCCESS] Dummy FAISS index created at: ./data/faiss
+2025-05-25 23:30:02 | INFO     | rag_pipeline | [INFO] Models initialized successfully.
+2025-05-25 23:30:02 | INFO     | retrieval | FAISS index loaded successfully from ./data/faiss
+2025-05-25 23:30:03 | INFO     | ui_logger | Initializing the UI
+2025-05-25 23:30:03 | INFO     | ui_logger | UI initialized successfully
+2025-05-25 23:31:06 | INFO     | main logger | User sent a query
+2025-05-25 23:31:08 | INFO     | main logger | User sent a query
+2025-05-25 23:31:09 | INFO     | main logger | User sent a query
+2025-05-25 23:31:09 | INFO     | main logger | User sent a query

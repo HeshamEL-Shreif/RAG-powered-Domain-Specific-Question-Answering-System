@@ -7,13 +7,25 @@ from logger.logging_config import setup_logger
 import os
 import base64
 from app.data_handeler import load_documents
-from app.rag_pipeline import get_response
+from app.rag_pipeline import initiate_models, get_pipeline
+from app.response import get_response
+
 
 UPLOAD_DIRECTORY = "data/upload"
 os.makedirs(UPLOAD_DIRECTORY, exist_ok=True)
+logger = setup_logger(name="main logger", level="DEBUG", log_file="./logs/app.log")
 
 def main():
-    logger = setup_logger(name="main logger", level="DEBUG", log_file="./logs/app.log")
+    
+    embedding, chat, memory, qa_prompt = initiate_models()
+    qa_chain = get_pipeline(
+        chat=chat,
+        memory=memory,
+        qa_prompt=qa_prompt,
+        embeddings=embedding
+    )
+    
+    
     app = interface()
     
 
@@ -32,7 +44,8 @@ def main():
         logger.info("User sent a query")
         
 
-        llm_response = get_response(query)
+        # llm_response = get_response(query, qa_chain)
+        llm_response = 'dummy'
         
         logger.info("LLM responsed")
         
@@ -71,6 +84,7 @@ def main():
     def handle_upload_and_clear(contents, clear_clicks, filenames):
         triggered_id = dash.callback_context.triggered[0]["prop_id"].split(".")[0]
         saved_files = []
+        global qa_chain 
         
         if triggered_id == "clear":
             if os.path.exists(UPLOAD_DIRECTORY):
@@ -93,7 +107,7 @@ def main():
                         with open(os.path.join(UPLOAD_DIRECTORY, filename), "wb") as f:
                             f.write(decoded)
                         
-                        load_documents(os.path.join(UPLOAD_DIRECTORY, filename))
+                        load_documents(os.path.join(UPLOAD_DIRECTORY, filename), embedding)
                         logger.info(f"File saved: {filename}")
                     else:
                         logger.warning(f"Unsupported file type: {filename}")
@@ -102,6 +116,13 @@ def main():
                           }))
                 except Exception as e:
                     logger.error(f"Failed to save file {filename}: {e}")
+            
+            qa_chain = get_pipeline(
+                chat=chat,
+                memory=memory,
+                qa_prompt=qa_prompt,
+                embeddings=embedding
+            )
 
         files = os.listdir(UPLOAD_DIRECTORY) if os.path.exists(UPLOAD_DIRECTORY) else []
         file_list_ui = [dbc.ListGroupItem(file) for file in files]

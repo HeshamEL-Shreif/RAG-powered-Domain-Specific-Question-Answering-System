@@ -1,16 +1,22 @@
 import os
-from langchain.document_loaders import PyPDFLoader, TextLoader, CSVLoader, UnstructuredWordDocumentLoader
+from langchain_community.document_loaders import PyPDFLoader, TextLoader, CSVLoader, UnstructuredWordDocumentLoader
+from langchain_community.vectorstores import FAISS
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain.vectorstores import FAISS
-from langchain.embeddings import HuggingFaceEmbeddings
 from logger.logging_config import setup_logger
 
+
 logger = setup_logger(name="data_handler", level="DEBUG", log_file="./logs/app.log")
-embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
+
 persist_directory = './data/faiss'
 os.makedirs(persist_directory, exist_ok=True)
 
-def load_documents(file_path):
+splitter = RecursiveCharacterTextSplitter(
+    chunk_size=1000,
+    chunk_overlap=200,
+    length_function=len
+)
+
+def load_documents(file_path, embeddings):
 
     if file_path.endswith('.pdf'):
         loader = PyPDFLoader(file_path)
@@ -24,20 +30,10 @@ def load_documents(file_path):
         raise ValueError(f"Unsupported file type: {file_path}")
     
     documents = loader.load()
-    splitter = RecursiveCharacterTextSplitter(
-        chunk_size=1000,
-        chunk_overlap=200,
-        length_function=len
-    )
     split_docs = splitter.split_documents(documents)
 
-    if os.path.exists(os.path.join(persist_directory, "index.faiss")):
-        
-        logger.info("Existing FAISS index found. Loading and updating")
-        vectorstore = FAISS.load_local(persist_directory, embeddings)
-        vectorstore.add_documents(split_docs)
-    else:
-        logger.info("Creating new FAISS index")
-        vectorstore = FAISS.from_documents(split_docs, embeddings)
+
+    vectorstore = FAISS.load_local(persist_directory, embeddings, allow_dangerous_deserialization=True)
+    vectorstore.add_documents(split_docs)
 
     vectorstore.save_local(persist_directory)
