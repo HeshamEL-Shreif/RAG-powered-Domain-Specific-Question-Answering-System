@@ -48,9 +48,10 @@ An intelligent assistant that answers questions based on uploaded documents usin
 rag-pdf-assistant/
 ├── app/
 │   ├── __init__.py
-│   ├── data_handeler.py # File parsing and text chunking logic, Embedding, FAISS store
+│   ├── data_handeler.py     # File parsing and text chunking logic, Embedding, FAISS store
 │   ├── rag_pipeline.py      # LangChain RAG pipeline (retriever + generator + memory)
-│   ├── retrieval.py         #  retriever setup
+│   ├── retrieval.py         # retriever setup
+│   ├── response.py          # get model response
 │
 ├── data/
 │   ├── upload/
