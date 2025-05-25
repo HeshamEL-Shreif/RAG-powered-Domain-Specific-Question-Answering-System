@@ -7,7 +7,8 @@ from logger.logging_config import setup_logger
 
 logger = setup_logger(name="data_handler", level="DEBUG", log_file="./logs/app.log")
 embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
-persist_directory = 'faiss/'
+persist_directory = './data/faiss'
+os.makedirs(persist_directory, exist_ok=True)
 
 def load_documents(file_path):
 
