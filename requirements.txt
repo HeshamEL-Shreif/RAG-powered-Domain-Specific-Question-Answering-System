@@ -8,3 +8,9 @@ dash-bootstrap-components
 dash-html-components
 torch
 numpy
+colorama
+dotenv
+langchain_community
+langchain_huggingface
+hf_xet
+langchain_chroma

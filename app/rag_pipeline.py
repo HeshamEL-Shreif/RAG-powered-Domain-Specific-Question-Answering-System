@@ -1,108 +1,98 @@
 from langchain_community.embeddings  import HuggingFaceEmbeddings
 from transformers import pipeline, AutoTokenizer, AutoModelForCausalLM
 from langchain.memory import ConversationBufferMemory
-from langchain_huggingface import HuggingFacePipeline, HuggingFaceEndpoint
+from langchain_huggingface import HuggingFacePipeline
 from langchain.prompts import PromptTemplate
-from langchain.chains import ConversationalRetrievalChain
-from langchain.chains.history_aware_retriever import create_history_aware_retriever
-from app.retrieval import get_retriever
-import os
-from langchain_community.vectorstores import FAISS
-from langchain.schema import Document
+from langchain_chroma import Chroma
 from logger.logging_config import setup_logger
-from app.data_handeler import load_documents
 
 logger = setup_logger(name="rag_pipeline", level="DEBUG", log_file="./logs/app.log")
 
-persist_directory = './data/faiss'
-
-def initialize_faiss(embeddings):
-    
-    if len(os.listdir('./data/upload')) > 0:
-        for file in os.listdir('./data/upload'):
-            file_path = os.path.join('./data/upload', file)
-            if os.path.isfile(file_path):
-                logger.info(f"[INFO] Loading documents from: {file_path}")
-                load_documents(file_path, embeddings)
-                logger.info(f"[SUCCESS] Documents loaded from: {file_path}")
-    else:
-        dummy_docs = [
-            Document(page_content="This is a dummy document for testing purposes. It contains no real data but serves as a placeholder.", metadata={"source": "dummy"}),
-        ]
-
-        logger.info("[INFO] Initializing dummy embeddings...")
-
-        vectorstore = FAISS.from_documents(dummy_docs, embeddings)
-
-        os.makedirs(persist_directory, exist_ok=True)
-        vectorstore.save_local(persist_directory)
-        logger.info(f"[SUCCESS] Dummy FAISS index created at: {persist_directory}")
-    
 
 
-def initiate_models():
+
+def initiate_pipeline(persist_directory = './data/chroma_langchain_db'):
 
     model_name_or_path = "meta-llama/Llama-3.2-1B-Instruct"
 
-    
-
     tokenizer = AutoTokenizer.from_pretrained(model_name_or_path)
     model = AutoModelForCausalLM.from_pretrained(model_name_or_path)
-    
 
     text_gen_pipeline = pipeline(
         "text-generation",
         model=model,
         tokenizer=tokenizer,
+        pad_token_id=tokenizer.eos_token_id,
+        max_new_tokens=1024
     )
-    
-    llm = HuggingFacePipeline(pipeline=text_gen_pipeline)
-    
-    
-    chat = llm  
-    memory = ConversationBufferMemory(memory_key="chat_history", return_messages=True)
-    
-    qa_prompt = PromptTemplate(
-        input_variables=["context", "chat_history", "question"],
-        template="""
-        You are a helpful assistant. Use the context and chat history to answer the user's question.
 
-        - If the user greets (e.g., says "hi", "hello"), respond with a short friendly message and do not over-explain.
-        - If there is no helpful information in the context, say you don't know and do not make up an answer.
-        - If the user asks a question that is related to the context, provide a concise and accurate answer based on the context.
-
-        Context:
-        {context}
-
-        Chat History:
-        {chat_history}
-
-        User's Question:
-        {question}
-
-        Assistant's Answer:"""
-    )
+    llm = HuggingFacePipeline(pipeline=text_gen_pipeline).bind(skip_prompt=True)
+    logger.info("[INFO] LLM initialized successfully.")
     
     embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
-    initialize_faiss(embeddings)
+    logger.info("[INFO] Embeddings initialized successfully.")
     
-    logger.info("[INFO] Models initialized successfully.")
+    memory = ConversationBufferMemory(memory_key="chat_history", return_messages=True)
     
-    return embeddings, chat, memory, qa_prompt
-    
-    
-
-def get_pipeline(embeddings, chat, memory, qa_prompt):
-    
-    base_retriever = get_retriever(5, embeddings)
-    logger.info("[INFO] Base retriever initialized.")
-
-    qa_chain = ConversationalRetrievalChain.from_llm(
-        llm=chat,
-        retriever=base_retriever,
-        memory=memory,
-        combine_docs_chain_kwargs={"prompt": qa_prompt}
+    vector_store = Chroma(
+    collection_name="rag_system",
+    embedding_function=embeddings,
+    persist_directory=persist_directory,
     )
-    logger.info("[INFO] ConversationalRetrievalChain created successfully.")
+    logger.info("[INFO] Vector store initialized successfully.")
+
+    qa_prompt = PromptTemplate(
+        input_variables=["context", "question", "chat_history"],
+        template="""
+    You are a knowledgeable and concise AI assistant. Use the context and the chat history to answer the user's question clearly and accurately.
+
+    Guidelines:
+    - Only use information from the context and prior conversation (chat history).
+    - If the answer is not present in the context, say: "The context does not provide enough information to answer this question."
+    - If interpretation is needed, rely strictly on the context and prior exchanges.
+    - Be specific, informative, and avoid unnecessary repetition.
+
+    Chat History:
+    {chat_history}
+
+    Context:
+    {context}
+
+    Question:
+    {question}
+
+    Answer:
+    """
+    )
+    return llm, memory, qa_prompt, vector_store
+
+def format_chat_history(messages):
+    formatted = []
+    for msg in messages:
+        if msg.__class__.__name__ == "HumanMessage":
+            formatted.append(f"Human: {msg.content}")
+        elif msg.__class__.__name__ == "AIMessage":
+            formatted.append(f"AI: {msg.content}")
+    return "\n".join(formatted)
+
+
+
+def rag(query, llm, qa_prompt, memory, vector_store):
     
-    return qa_chain
+    retrieved_docs = vector_store.similarity_search(query)
+    logger.info(f"[INFO] Retrieved {len(retrieved_docs)} documents for query: {query}")
+    
+    docs_content = "\n\n".join(doc.page_content for doc in retrieved_docs)
+    
+    chat_history = format_chat_history(memory.chat_memory.messages)
+    messages = qa_prompt.invoke({"question": query, "context": docs_content, "chat_history":chat_history})
+    logger.info(f"[INFO] Generated messages for query: {query}")
+    
+    response = llm.invoke(messages)
+    logger.info(f"[INFO] Response generated for query: {query} - {response}")
+    
+    memory.save_context({"input": query}, {"output": response})
+    logger.info(f"[INFO] Memory updated with query: {query} and response: {response}")
+    
+    return response
+    

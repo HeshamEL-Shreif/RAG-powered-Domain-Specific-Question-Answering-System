@@ -1,6 +1,5 @@
 import os
 from langchain_community.document_loaders import PyPDFLoader, TextLoader, CSVLoader, UnstructuredWordDocumentLoader
-from langchain_community.vectorstores import FAISS
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from logger.logging_config import setup_logger
 
@@ -16,7 +15,7 @@ splitter = RecursiveCharacterTextSplitter(
     length_function=len
 )
 
-def load_documents(file_path, embeddings):
+def load_documents(file_path, vector_store):
 
     if file_path.endswith('.pdf'):
         loader = PyPDFLoader(file_path)
@@ -31,9 +30,4 @@ def load_documents(file_path, embeddings):
     
     documents = loader.load()
     split_docs = splitter.split_documents(documents)
-
-
-    vectorstore = FAISS.load_local(persist_directory, embeddings, allow_dangerous_deserialization=True)
-    vectorstore.add_documents(split_docs)
-
-    vectorstore.save_local(persist_directory)
+    _ = vector_store.add_documents(documents=split_docs)

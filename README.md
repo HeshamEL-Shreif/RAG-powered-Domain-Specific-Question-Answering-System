@@ -24,9 +24,9 @@ An intelligent assistant that answers questions based on uploaded documents usin
 
 1. **Upload Documents:** Users upload documents via the Dash frontend.
 2. **Document Parsing & Chunking:** Files are parsed and split into text chunks using LangChain's document loaders and text splitters.
-3. **Embedding + Indexing:** LangChain generates embeddings using `SentenceTransformers`, stores them in a FAISS vector store.
+3. **Embedding + Indexing:** LangChain generates embeddings using `SentenceTransformers`, stores them in a Chroma vector store.
 4. **Query Processing:** Users input natural language questions.
-5. **Retrieval + Generation:** Relevant chunks are retrieved from FAISS and passed along with chat history to LLaMA 3.2 via a LangChain Runnable/Chain.
+5. **Retrieval + Generation:** Relevant chunks are retrieved from Chroma and passed along with chat history to LLaMA 3.2 via a LangChain Runnable/Chain.
 6. **Conversational Memory:** LangChain memory components maintain chat history for contextual answers.
 
 ---
@@ -38,7 +38,7 @@ An intelligent assistant that answers questions based on uploaded documents usin
 | LLM            | `LLaMA 3.2 Instruct 1B` from Hugging Face     |
 | Framework      | `LangChain` for RAG pipeline and memory       |
 | Embeddings     | `SentenceTransformers`                        |
-| Vector DB      | `FAISS` via LangChain                         |
+| Vector DB      | `Chroma` via LangChain                         |
 | UI             | `Dash` and `Dash Bootstrap Components`        |
 
 ---
@@ -48,14 +48,12 @@ An intelligent assistant that answers questions based on uploaded documents usin
 rag-pdf-assistant/
 ├── app/
 │   ├── __init__.py
-│   ├── data_handeler.py     # File parsing and text chunking logic, Embedding, FAISS store
+│   ├── data_handeler.py     # File parsing and text chunking logic, Embedding, Chroma store
 │   ├── rag_pipeline.py      # LangChain RAG pipeline (retriever + generator + memory)
-│   ├── retrieval.py         # retriever setup
-│   ├── response.py          # get model response
 │
 ├── data/
 │   ├── upload/
-│   └── faiss/ # vector database
+│   └── chroma_langchain_db/ # vector database
 │
 ├── logger/
 │   ├── __init__.py
@@ -97,11 +95,17 @@ python main.py
 ```
 
 ## 📦 Requirements
-- Python 3.9+
-- langchain
-- langchain-community
-- langchainhub
+- nltk 
+- pypdf
 - transformers
-- sentence-transformers
-- faiss-cpu or faiss-gpu
-- dash, dash-bootstrap-components
+- dash
+- dash-bootstrap-components
+- dash-html-components
+- torch
+- numpy
+- colorama
+- dotenv
+- langchain_community
+- langchain_huggingface
+- hf_xet
+- langchain_chroma

@@ -7,25 +7,21 @@ from logger.logging_config import setup_logger
 import os
 import base64
 from app.data_handeler import load_documents
-from app.rag_pipeline import initiate_models, get_pipeline
-from app.response import get_response
+from app.rag_pipeline import initiate_pipeline, rag
 
 
 UPLOAD_DIRECTORY = "data/upload"
 os.makedirs(UPLOAD_DIRECTORY, exist_ok=True)
+
 logger = setup_logger(name="main logger", level="DEBUG", log_file="./logs/app.log")
 
 def main():
     
-    embedding, chat, memory, qa_prompt = initiate_models()
-    qa_chain = get_pipeline(
-        chat=chat,
-        memory=memory,
-        qa_prompt=qa_prompt,
-        embeddings=embedding
-    )
+    logger.info("Starting the RAG application...") 
     
-    
+    llm, memory, qa_prompt, vector_store = initiate_pipeline() 
+    logger.info("RAG pipeline initiated successfully.") 
+     
     app = interface()
     
 
@@ -44,8 +40,7 @@ def main():
         logger.info("User sent a query")
         
 
-        llm_response = get_response(query, qa_chain)
-        #llm_response = 'dummy'
+        llm_response = rag(query, llm, qa_prompt, memory, vector_store)
         
         logger.info("LLM responsed")
         
@@ -107,7 +102,7 @@ def main():
                         with open(os.path.join(UPLOAD_DIRECTORY, filename), "wb") as f:
                             f.write(decoded)
                         
-                        load_documents(os.path.join(UPLOAD_DIRECTORY, filename), embedding)
+                        load_documents(os.path.join(UPLOAD_DIRECTORY, filename), vector_store)
                         logger.info(f"File saved: {filename}")
                     else:
                         logger.warning(f"Unsupported file type: {filename}")
@@ -116,14 +111,7 @@ def main():
                           }))
                 except Exception as e:
                     logger.error(f"Failed to save file {filename}: {e}")
-            
-            qa_chain = get_pipeline(
-                chat=chat,
-                memory=memory,
-                qa_prompt=qa_prompt,
-                embeddings=embedding
-            )
-
+                    
         files = os.listdir(UPLOAD_DIRECTORY) if os.path.exists(UPLOAD_DIRECTORY) else []
         file_list_ui = [dbc.ListGroupItem(file) for file in files]
 
