@@ -69,7 +69,7 @@ rag-pdf-assistant/
 │   ├── __init__.py
 │   └── ui.py                # Dash frontend with file uploader + chat interface
 │
-├── demo.png                 # Static screenshot of the interface
+├── demo.gif                # demo of the project
 ├── main.py                  # Entry script to launch app
 ├── README.md                # Documentation
 ├── requirements.txt         # Dependencies
