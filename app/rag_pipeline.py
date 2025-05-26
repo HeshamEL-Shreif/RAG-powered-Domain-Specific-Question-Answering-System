@@ -26,7 +26,7 @@ def initiate_pipeline(persist_directory = './data/chroma_langchain_db'):
         max_new_tokens=1024
     )
 
-    llm = HuggingFacePipeline(pipeline=text_gen_pipeline).bind(skip_prompt=True)
+    llm = HuggingFacePipeline(pipeline=text_gen_pipeline)
     logger.info("[INFO] LLM initialized successfully.")
     
     embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
@@ -51,6 +51,7 @@ def initiate_pipeline(persist_directory = './data/chroma_langchain_db'):
     - If the answer is not present in the context, say: "The context does not provide enough information to answer this question."
     - If interpretation is needed, rely strictly on the context and prior exchanges.
     - Be specific, informative, and avoid unnecessary repetition.
+    - focus on the question be specific in your answer and try to be concise
 
     Chat History:
     {chat_history}
@@ -64,6 +65,7 @@ def initiate_pipeline(persist_directory = './data/chroma_langchain_db'):
     Answer:
     """
     )
+     
     return llm, memory, qa_prompt, vector_store
 
 def format_chat_history(messages):
@@ -86,13 +88,14 @@ def rag(query, llm, qa_prompt, memory, vector_store):
     
     chat_history = format_chat_history(memory.chat_memory.messages)
     messages = qa_prompt.invoke({"question": query, "context": docs_content, "chat_history":chat_history})
-    logger.info(f"[INFO] Generated messages for query: {query}")
+    logger.info(f"[INFO] Generated messages for query:")
     
+    llm = llm.bind(skip_prompt=True)
     response = llm.invoke(messages)
-    logger.info(f"[INFO] Response generated for query: {query} - {response}")
+    logger.info(f"[INFO] Response generated for query")
     
     memory.save_context({"input": query}, {"output": response})
-    logger.info(f"[INFO] Memory updated with query: {query} and response: {response}")
+    logger.info(f"[INFO] Memory updated with query")
     
     return response
     
