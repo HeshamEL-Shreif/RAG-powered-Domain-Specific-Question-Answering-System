@@ -533,3 +533,18 @@ Make sure your token has the correct permissions.
 2025-05-26 01:38:11 | INFO     | ui_logger | Initializing the UI
 2025-05-26 01:38:11 | INFO     | ui_logger | UI initialized successfully
 2025-05-26 01:39:28 | INFO     | main logger | User sent a query
+2025-05-26 15:25:13 | INFO     | main logger | Starting the RAG application...
+2025-05-26 15:26:25 | INFO     | rag_pipeline | [INFO] LLM initialized successfully.
+2025-05-26 15:26:33 | INFO     | rag_pipeline | [INFO] Embeddings initialized successfully.
+2025-05-26 15:26:35 | INFO     | rag_pipeline | [INFO] Vector store initialized successfully.
+2025-05-26 15:26:35 | INFO     | main logger | RAG pipeline initiated successfully.
+2025-05-26 15:26:35 | INFO     | ui_logger | Initializing the UI
+2025-05-26 15:26:35 | INFO     | ui_logger | UI initialized successfully
+2025-05-26 15:29:56 | INFO     | main logger | Starting the RAG application...
+2025-05-26 15:29:56 | INFO     | main logger | RAG pipeline initiated successfully.
+2025-05-26 15:29:56 | INFO     | ui_logger | Initializing the UI
+2025-05-26 15:29:56 | INFO     | ui_logger | UI initialized successfully
+2025-05-26 15:30:27 | INFO     | main logger | Starting the RAG application...
+2025-05-26 15:30:27 | INFO     | main logger | RAG pipeline initiated successfully.
+2025-05-26 15:30:27 | INFO     | ui_logger | Initializing the UI
+2025-05-26 15:30:27 | INFO     | ui_logger | UI initialized successfully
